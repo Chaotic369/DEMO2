@@ -64,10 +64,10 @@
             }
 
   /* ---------- settings screen (MainActivity) ---------- */
-      .settings{
-                flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
-                padding:20px 16px 24px; background:var(--ink); gap:10px; overflow-y:auto;
-              }
+        .settings{
+                  flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+                  padding:16px; background:var(--panel); gap:12px; overflow-y:auto;
+                }
         .settings::-webkit-scrollbar { width: 4px; }
         .settings::-webkit-scrollbar-thumb { background: var(--hair); border-radius: 4px; }
         .field-wrap{ width:100%; }
@@ -108,8 +108,8 @@
                                                                                                                   color:var(--text);
                                                                                                                 }
                                         .btn-white{
-                                                                          background:var(--panel);
-                                                                        }
+                                                                                                                  background:var(--field);
+                                                                                                                }
                                                     .btn:active{ background:var(--ink); transform:scale(.98); }
                                                         .btn-save{ color:var(--accent); }
                                                         .btn-save:hover{ filter:brightness(1.1); }
@@ -143,12 +143,12 @@
                                         }
 
                     .segment-control {
-                                                                                      display:flex; width:100%; background:var(--ink); border-radius:10px; padding:3px; gap:2px; border:none;
-                                                                                    }
-                                                                .seg-btn {
-                                                                                                                                                          flex:1; background:transparent; border:none; color:var(--dim); height:22px; border-radius:8px;
-                                                                                  font-size:10px; font-weight:600; cursor:pointer; text-transform:uppercase; transition:all .2s ease;
-                                                                                }
+                                                                                                          display:flex; width:100%; background:transparent; border-radius:12px; padding:4px; gap:4px; border:none;
+                                                                                                        }
+                                                                                    .seg-btn {
+                                                                                                                                                                              flex:1; background:transparent; border:none; color:var(--dim); height:32px; border-radius:10px;
+                                                                                                      font-size:11px; font-weight:700; cursor:pointer; text-transform:uppercase; transition:all .2s ease;
+                                                                                                    }
                                                         .seg-btn.active {
                                                                                                                                                                                   background:var(--accent); color:var(--panel); border:none;
                                                                                                                                                                                 }
@@ -265,8 +265,8 @@
                                                                                                                                                                                                                                                   <svg id="configBtn" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="width:14px; height:14px; cursor:pointer; transition:opacity 0.2s ease; color:var(--text);"><circle cx="12" cy="12" r="3" fill="var(--ink)"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
                                                                                                                             </div>
           
-                                                <div style="position: relative; width: 100%; flex: 1; min-height: 150px; margin: 16px 0; margin-bottom: auto; max-width: 600px; align-self: center;">
-                                                                                                  <div style="width: 100%; height: 100%; background: #000000; border-radius: 24px; border: none; overflow: hidden; position: absolute; inset: 0; box-shadow:0 12px 32px rgba(0,0,0,0.35);">
+                                                <div style="position: relative; width: 100%; flex: 1; min-height: 150px; margin: 8px auto auto; max-width: 600px; align-self: center;">
+                                                                                                  <div style="width: 100%; height: 100%; background: #000000; border-radius: 16px; border: none; overflow: hidden; position: absolute; inset: 0; box-shadow:0 12px 32px rgba(0,0,0,0.2);">
                                                                                                     <iframe id="miniFrame" style="width:100%; height:100%; border:none; display:none; position:absolute; top:0; left:0; transform-origin:top left;" sandbox="allow-scripts allow-same-origin"></iframe>
                                                                                                     <video id="miniVideo" style="width:100%; height:100%; object-fit:cover; display:none; position:absolute; top:0; left:0; transform-origin:top left;" autoplay loop muted playsinline></video>
                                                                                                     <span id="miniLabel" style="color:#aaaaaa; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); pointer-events:none; z-index:1; display:flex; align-items:center; justify-content:center;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px; height:20px;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
@@ -301,23 +301,23 @@
                                                     <button class="seg-btn" id="btnTypeHtml">HTML</button>
                                                   </div>
 
-                                        <div class="field-wrap" id="urlWrap" style="height:24px; display:flex; align-items:center; position:relative; max-width:600px; margin:0 auto;">
-                                                                                                                                              <input type="text" id="urlInput" autocomplete="off" spellcheck="false" placeholder="https://example.com" style="height:24px; line-height:24px; padding:0 28px 0 10px; width:100%; border-radius:8px; background:var(--panel); font-size:10px; font-weight:600; border:none; outline:none;">
+                                        <div class="field-wrap" id="urlWrap" style="height:36px; display:flex; align-items:center; position:relative; max-width:600px; margin:0 auto;">
+                                                                                                                                                                                      <input type="text" id="urlInput" autocomplete="off" spellcheck="false" placeholder="https://example.com" style="height:36px; line-height:36px; padding:0 28px 0 12px; width:100%; border-radius:12px; background:var(--field); font-size:11px; font-weight:600; border:none; outline:none;">
                                                                                                                                               <button type="button" id="urlGoBtn" style="display:none; position:absolute; right:2px; top:50%; transform:translateY(-50%); width:20px; height:20px; padding:0; border:none; background:transparent; color:var(--dim); cursor:pointer; align-items:center; justify-content:center;">
                                                                                                                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                                                                                                                           </button>
                                                                                                                         </div>
           
-                                                            <div id="fileWrap" style="display:none; text-align:center; padding:0; height:24px; width:100%; max-width:600px; margin:0 auto;">
-                                                                                                                                                                                                                              <label style="cursor:pointer; color:var(--text); font-size:10px; display:flex; align-items:center; justify-content:center; gap:6px; font-weight:600; text-transform:uppercase; letter-spacing:0.02em; background:var(--panel); border: none; padding:0 16px; height:24px; width:100%; border-radius:8px; transition:all 0.2s ease; box-sizing:border-box;">
+                                                            <div id="fileWrap" style="display:none; text-align:center; padding:0; height:36px; width:100%; max-width:600px; margin:0 auto;">
+                                                                                                                                                                                                                                                                                          <label style="cursor:pointer; color:var(--text); font-size:11px; display:flex; align-items:center; justify-content:center; gap:6px; font-weight:600; text-transform:uppercase; letter-spacing:0.02em; background:var(--field); border: none; padding:0 16px; height:36px; width:100%; border-radius:12px; transition:all 0.2s ease; box-sizing:border-box;">
                                                                                                                                                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px; color:var(--accent);"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
                                                                                                                                                                                                                   <span id="fileNameDisplay" style="overflow:hidden; text-overflow:ellipsis; max-width:140px; white-space:nowrap; color:var(--dim);">Upload Video</span>
                                                                                                                                                                                                                   <input type="file" id="fileInput" accept="video/*" style="display:none;">
                                                                                   </label>
                                                                                 </div>
 
-                                        <div style="position:relative; width:100%; max-width:600px; margin:0 auto;">
-                                                                                                                <button class="btn btn-apply" id="applyBtn" style="background:var(--accent); color:var(--panel); width:auto; display:flex; padding:0 16px; margin:0 auto;">Apply</button>
+                                        <div style="position:relative; width:100%; max-width:600px; margin:0 auto; padding-bottom:12px;">
+                                                                                                                                                        <button class="btn btn-apply" id="applyBtn" style="background:var(--accent); color:var(--panel); width:100%; display:flex; justify-content:center; align-items:center; padding:0 16px; margin:0 auto; height:36px; border-radius:12px; font-size:12px;">Apply</button>
                                                                                                                                                                               <div id="applyPopup" style="display:none; position:absolute; bottom:115%; left:50%; transform:translateX(-50%); width:auto; min-width:140px; background:var(--ink); padding:8px; border-radius:12px; flex-direction:column; gap:4px; box-shadow:0 10px 20px rgba(0,0,0,0.5); z-index:20; border:none;">
                                                                                               <button class="btn apply-opt" style="background:var(--field);" data-val="Home Screen">Home Screen</button>
                                                                                               <button class="btn apply-opt" style="background:var(--field);" data-val="Lock Screen">Lock Screen</button>
@@ -456,8 +456,8 @@
   const urlInput   = document.getElementById('urlInput');
     const applyBtn   = document.getElementById('applyBtn');
   const statusRow  = document.getElementById('statusRow');
-  const frame      = document.getElementById('wallpaperFrame');
-  const emptyMsg   = document.getElementById('emptyMsg');
+  const frame      = document.getElementById('wallpaperFrame'); // intentionally absent in this demo build — guarded below
+    const emptyMsg   = document.getElementById('emptyMsg'); // intentionally absent in this demo build — guarded below
       const btnTypeWeb = document.getElementById('btnTypeWeb');
         const btnTypeVideo = document.getElementById('btnTypeVideo');
         const btnTypeHtml = document.getElementById('btnTypeHtml');
@@ -994,8 +994,14 @@
             applyPopup.style.display = 'none';
         
             const target = e.target.getAttribute('data-val');
+                                    if (!frame || !wallpaperVideo || !lockFrame || !lockVideo) {
+                                      statusRow.textContent = 'Applied (demo: no live wallpaper surface in this build)';
+                                      statusRow.className = 'status-row ok';
+                                      setTimeout(() => { if (statusRow.textContent.indexOf('Applied (demo') === 0) statusRow.textContent = ''; }, 3000);
+                                      return;
+                                    }
       
-                        if ((target === 'Home Screen' || target === 'Both') && frame && wallpaperVideo) {
+                                    if ((target === 'Home Screen' || target === 'Both') && frame && wallpaperVideo) {
                                                   frame.style.display = 'none';
                                                   wallpaperVideo.style.display = 'none';
                                                   frame.src = '';
